@@ -86,7 +86,7 @@ LeakGuard abstracts network configuration from the core detection engine, allowi
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/leakguard.git
+git clone https://github.com/ritvi-shah/leakguard.git
 cd leakguard
 
 ```
