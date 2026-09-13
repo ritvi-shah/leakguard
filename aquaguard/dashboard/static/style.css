@@ -1,0 +1,78 @@
+:root{
+  --bg:#f2f5f9; --card:#ffffff; --ink:#16233b; --ink2:#5b6b82;
+  --line:#dbe3ec; --accent:#0b6e99; --accent2:#085a7d;
+  --good:#177245; --goodbg:#e7f5ec; --warn:#8a6116; --warnbg:#fdf3dd;
+  --bad:#b3261e; --badbg:#fdeceb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);font-size:16px;line-height:1.55}
+
+.sitehead{text-align:center;padding:34px 16px 10px}
+.appname{font-size:2.6rem;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+.tagline{color:var(--ink2);font-size:1.02rem;margin-top:4px}
+
+.tabs{display:flex;justify-content:center;gap:6px;margin:22px auto 0;max-width:760px;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px}
+.tab{flex:1;border:none;background:transparent;color:var(--ink2);font-size:1rem;
+  font-weight:600;padding:11px 10px;border-radius:8px;cursor:pointer}
+.tab:hover{background:#eef3f8;color:var(--ink)}
+.tab.active{background:var(--accent);color:#fff}
+
+.controlstrip{max-width:1100px;margin:16px auto 0;padding:0 20px;display:flex;
+  flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{border:1.5px solid var(--line);background:var(--card);color:var(--ink2);
+  border-radius:999px;padding:9px 16px;font-size:.92rem;font-weight:600;cursor:pointer}
+.pill:hover{border-color:var(--accent);color:var(--accent)}
+.pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.playwrap{display:flex;align-items:center;gap:10px;min-width:300px;flex:1;max-width:460px}
+.playbtn{background:var(--accent);border:none;color:#fff;font-weight:700;border-radius:8px;
+  padding:9px 16px;cursor:pointer;font-size:.92rem}
+.playbtn:hover{background:var(--accent2)}
+.playwrap input[type=range]{flex:1;accent-color:var(--accent)}
+.timelabel{font-variant-numeric:tabular-nums;font-size:.9rem;color:var(--ink2);min-width:110px}
+
+.panel{display:none;max-width:1100px;margin:20px auto 40px;padding:0 20px}
+.panel.active{display:block}
+
+.sect{font-size:1.15rem;font-weight:700;margin:30px 0 4px}
+.secthint{color:var(--ink2);font-size:.95rem;margin-bottom:14px}
+
+.statusgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:4px}
+.statcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  border-left:5px solid var(--line)}
+.statlabel{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--ink2);font-weight:600;margin-bottom:6px}
+.statvalue{font-size:1.25rem;font-weight:700}
+.statcard.ok{border-left-color:#2f9e63}.statcard.ok .statvalue{color:var(--good)}
+.statcard.warn{border-left-color:#d9a62e}.statcard.warn .statvalue{color:var(--warn)}
+.statcard.alert{border-left-color:#d64545;background:var(--badbg)}
+.statcard.alert .statvalue{color:var(--bad)}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.tile{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px;cursor:pointer}
+.tile:hover{border-color:var(--accent)}
+.tile.sel{border-color:var(--accent);box-shadow:0 0 0 3px rgba(11,110,153,.14)}
+.tile.near{border-color:#d9a62e;background:var(--warnbg)}
+.tile .nm{font-size:.8rem;color:var(--ink2);font-weight:600}
+.tile .pv{font-size:1.5rem;font-weight:800;margin-top:6px;color:var(--ink)}
+
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px;height:300px;margin-bottom:8px}
+
+.mtable{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;overflow:hidden;font-size:.98rem}
+.mtable th,.mtable td{border-bottom:1px solid var(--line);padding:12px 14px;text-align:center}
+.mtable th{background:#eef3f8;color:var(--ink);font-weight:700}
+.mtable td:first-child{text-align:left;font-weight:600;color:var(--ink2)}
+.note{color:var(--ink2);font-size:.92rem;margin:10px 0 6px}
+.method p{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin-bottom:12px;font-size:.97rem}
+.mono{font-variant-numeric:tabular-nums}
+
+.foot{text-align:center;color:var(--ink2);font-size:.85rem;padding:0 20px 40px}
+.errbox{max-width:1100px;margin:14px auto 0;background:var(--badbg);color:var(--bad);
+  border:1px solid #e5b5b2;border-radius:10px;padding:12px 16px;font-size:.9rem;
+  font-family:Consolas,monospace}
